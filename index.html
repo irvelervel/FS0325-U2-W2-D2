@@ -11,7 +11,10 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <!-- dentro un container ci possono essere più di una row -->
+  <!-- NO a col dentro un container -->
+  <!-- NO a row fuori da un container -->
+  <body class="min-vh-100 d-flex flex-column">
     <header>
       <!-- INIZIO NAVBAR -->
       <nav class="navbar navbar-expand-md bg-primary" data-bs-theme="dark">
@@ -58,84 +61,261 @@
         </div>
       </nav>
       <!-- FINE NAVBAR -->
-      <h1>PAGINA BOOTSTRAP</h1>
+      <h1 class="text-center my-4">PAGINA BOOTSTRAP</h1>
     </header>
-    <main>
-      <!-- INIZIO CAROSELLO -->
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="0"
-            class="active"
-            aria-current="true"
-            aria-label="Slide 1"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="1"
-            aria-label="Slide 2"
-          ></button>
-          <button
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide-to="2"
-            aria-label="Slide 3"
-          ></button>
+    <main class="flex-grow-1">
+      <div class="container">
+        <!-- INIZIO ROW -->
+        <div class="row justify-content-center">
+          <!-- INIZIO COL -->
+          <div class="col col-12 col-md-8 col-lg-6">
+            <!-- INIZIO CAROSELLO -->
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleCaptions"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <!-- un carousel-item rappresenta una slide -->
+                <div class="carousel-item active">
+                  <img
+                    src="./assets/img/1.jpg"
+                    class="d-block w-100"
+                    alt="micio 1"
+                  />
+                  <div class="carousel-caption">
+                    <h5>First slide label</h5>
+                    <p>
+                      Some representative placeholder content for the first
+                      slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/2.jpg"
+                    class="d-block w-100"
+                    alt="micio 2"
+                  />
+                  <div class="carousel-caption">
+                    <h5>Second slide label</h5>
+                    <p>
+                      Some representative placeholder content for the second
+                      slide.
+                    </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="./assets/img/3.jpg"
+                    class="d-block w-100"
+                    alt="micio 3"
+                  />
+                  <div class="carousel-caption">
+                    <h5>Third slide label</h5>
+                    <p>
+                      Some representative placeholder content for the third
+                      slide.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <!-- FINE CAROSELLO -->
+          </div>
+          <!-- FINE COL -->
         </div>
-        <div class="carousel-inner">
-          <!-- un carousel-item rappresenta una slide -->
-          <div class="carousel-item active">
-            <img src="./assets/img/1.jpg" class="d-block w-100" alt="micio 1" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
+        <!-- FINE ROW -->
+        <!-- GRIGLIA DI CARDS -->
+        <h2 class="text-center my-4">GRIGLIA DI CARDS</h2>
+        <div class="row g-3">
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="./assets/img/2.jpg" class="d-block w-100" alt="micio 2" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>
-                Some representative placeholder content for the second slide.
-              </p>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <!-- GRIGLIA DI CARDS -->
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
-          <div class="carousel-item">
-            <img src="./assets/img/3.jpg" class="d-block w-100" alt="micio 3" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>
-                Some representative placeholder content for the third slide.
-              </p>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <!-- GRIGLIA DI CARDS -->
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <!-- GRIGLIA DI CARDS -->
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <!-- GRIGLIA DI CARDS -->
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <!-- GRIGLIA DI CARDS -->
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <!-- GRIGLIA DI CARDS -->
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6 col-lg-4 col-xl-3">
+            <!-- GRIGLIA DI CARDS -->
+            <div class="card">
+              <img src="./assets/img/1.jpg" class="card-img-top" alt="micio1" />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card’s content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleCaptions"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
       </div>
-      <!-- FINE CAROSELLO -->
     </main>
+    <footer>
+      <!-- per spingere il footer sempre in basso, assegneremo al body un'altezza
+         fissa di 100vh (in modo da fargli toccare il fondo della pagina) -->
+      <!-- a questo punto rendo il body un contenitore flessibile con direzione
+          colonna, in modo da rendere disponibile lo spazio libero in fondo come
+          "spazio di manovra" -->
+      <!-- questo spazio libero, infine, lo do in pasto al main, in modo da
+           -spingere- sempre in fondo il footer -->
+      <section class="container">
+        <div class="py-3">
+          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-body-secondary">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-body-secondary">Features</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-body-secondary">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-body-secondary">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link px-2 text-body-secondary">About</a>
+            </li>
+          </ul>
+          <p class="text-center text-body-secondary">© 2025 Company, Inc</p>
+        </div>
+      </section>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
